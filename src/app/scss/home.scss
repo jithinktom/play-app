@@ -1,0 +1,38 @@
+.bgimage {
+    text-align: right;
+    color: white;
+    background-size: cover;
+    height: 100%;
+    background-position: center center;
+}
+ul[rn-carousel] {
+    margin: 0;
+    padding: 0;
+}
+section.jumbotron {
+  text-align: center;
+  height: calc(100vh - 64px);
+  color: white;
+  overflow: hidden;
+
+  h1 {
+    font-size: 3em;
+  }
+}
+.side-nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+    .side-nav-top {
+        background-color: $hue-1;
+    }
+    .side-nav-bottom {
+        background-color: $hue-2;
+    }
+}

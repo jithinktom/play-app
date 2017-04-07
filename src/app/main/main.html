@@ -1,34 +1,37 @@
-<div layout="vertical" layout-fill>
+<header>
+	<acme-navbar creation-date="main.creationDate"></acme-navbar>
+</header>
 
-  <md-content>
-    <header>
-      <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
+<section class="jumbotron" layout="row" layout-fill layout-align="center stretch">
 
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-      </p>
-    </section>
-
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
-        </div>
-      </md-card>
-    </div>
-  </md-content>
-
-</div>
+	<ul rn-carousel class="image" flex="75">
+		<li>
+			<div style="background-image: url('https://static.pexels.com/photos/115016/badminton-shuttle-sport-bat-115016.jpeg')" class="bgimage">
+				#2
+			</div>
+		</li>
+		<li>
+			<div style="background-image: url('http://wallpapercave.com/wp/j1H5qWN.jpg')" class="bgimage">
+				#2
+			</div>
+		</li>
+		<li>
+			<div style="background-image: url('http://1.bp.blogspot.com/-DCNAZwXygmA/U_wugvi8tSI/AAAAAAAAM7A/L8dwYlOqIbk/s1600/Master_Blaster_Sachin_Tendulkar_Wallpapers.jpg')"
+				class="bgimage">
+				#2
+			</div>
+		</li>
+	</ul>
+	<div flex="25" class="side-nav" layout="column">
+		<ul class="side-nav-top" flex="50" layout="column">
+			<li flex></li>
+			<li flex></li>
+			<li flex></li>
+		</ul>
+		<ul class="side-nav-bottom" flex="50">
+			<li flex></li>
+			<li flex></li>
+			<li flex></li>
+		</ul>
+	</div>
+</section>

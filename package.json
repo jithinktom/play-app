@@ -1,7 +1,9 @@
 {
   "name": "comeLetsPlay",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "angular-carousel": "^1.0.2"
+  },
   "scripts": {
     "test": "gulp test"
   },
