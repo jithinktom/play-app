@@ -1,0 +1,36 @@
+<header>
+	<acme-navbar creation-date="main.creationDate"></acme-navbar>
+</header>
+
+<div class="find-page container">
+	<md-toolbar>
+		<div layout-gt-xs="row">
+			<div flex-gt-xs layout="row" layout-wrap>
+				<h4 flex="100">Place</h4>
+				<md-input-container flex="90">
+					<md-select ng-model="selectedUser">
+						<md-option ng-value="user" ng-repeat="user in users">{{ user.name }}</md-option>
+					</md-select>
+				</md-input-container>
+			</div>
+
+			<div flex-gt-xs layout-wrap layout="row">
+				<h4 flex="100">Sport</h4>
+				<md-input-container flex="90">
+					<md-select ng-model="selectedUser">
+						<md-option ng-value="user" ng-repeat="user in users">{{ user.name }}</md-option>
+					</md-select>
+				</md-input-container>
+			</div>
+			<div flex-gt-xs layout="row" layout-wrap>
+				<h4 flex="100">Date from</h4>
+				<md-datepicker flex="90" ng-model="birthday"></md-datepicker>
+			</div>
+			<div flex-gt-xs layout="row" layout-wrap>
+				<h4 flex="100">Date to</h4>
+				<md-datepicker flex="90" ng-model="birthday"></md-datepicker>
+			</div>
+		</div>
+	</md-toolbar>
+
+</div>

@@ -1,10 +1,19 @@
-<md-toolbar layout="row" layout-align="center center">
+<md-toolbar class="header dark">
+    <div class="md-toolbar-tools" layout="row" layout-sm="column">
+        <div>
+            <md-button aria-label="Go Back" flex-sm="30">
+                Lets Play
+            </md-button>
+        </div>
+        <span flex></span>
+        <div layout="row">
+            <ul>
+                <li><a href="">Find tournament</a></li>
+                <li><a href="">Create tournament</a></li>
+            </ul>
 
-	<md-button href="https://github.com/Swiip/generator-gulp-angular" class="md-raised md-primary">Lets Play</md-button>
-
-	<section flex layout="row" layout-align="end center">
-		<md-button href="#" class="md-raised md-primary">Find</md-button>
-		<md-button href="#" class="md-raised md-primary">Create</md-button>
-	</section>
-
+            <!--<md-button class="md-accent md-raised" ng-click="login()">Login</md-button>-->
+            <!--<md-button class="md-accent font-11">Forgot Password</md-button>-->
+        </div>
+    </div>
 </md-toolbar>

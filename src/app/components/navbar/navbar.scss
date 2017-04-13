@@ -1,20 +1,49 @@
-.acme-navbar-text{
-  color: white;
-}
-
-a {
-  color: black;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0;
-  line-height: 1.25em;
-}
-
-a:hover, a:focus {
-  color: greenyellow;
-}
-md-toolbar:not(.md-menu-toolbar) {
-  background-color: #fff;
+.header {
+    md-input-container {
+        margin: 0px 5px 0px 0px;
+        
+        .md-errors-spacer {
+            min-height: 0px;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding-right: 10px;
+            margin-right: 10px;
+            font-size: 14px;
+            font-family: "PremierSans-Bold";
+            a{
+                padding: 21px 0px;
+                transition: all .2s ease-in-out;
+                position: relative;
+                
+                &:hover{
+                    color: #fff;
+                    text-decoration: none;
+                }
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 0;
+                    background: $accent;
+                    -webkit-transition: .2s;
+                    transition: .2s;
+                    z-index: -1;
+                }
+            }
+            a:hover::before {
+                height: 4px;
+            }
+            
+        }
+    }
 }

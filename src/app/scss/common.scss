@@ -1,15 +1,63 @@
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.woff) format('woff'),
-       url(../../bower_components/material-design-iconfont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+button, select, html, textarea, input {
+    font-family: "PremierSans-Regular";
+    color: #333333;
 }
 
+.font-14{  font-size:14px;}
+.font-13{  font-size:13px;}
+.font-12{  font-size:12px;}
+.font-11{  font-size:11px;}
+
+.pull-left {
+    float:left;
+}
+.pull-right {
+    float: right;
+}
+.m-r-5 {
+    margin-right: 5px;
+}
+.relative {
+    position: relative;
+}
+.wrapper {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+b, strong {
+    font-family: "PremierSans-Bold",Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+a {
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+        color: $hue-2;
+        text-decoration: underline;
+    }
+}
+
+md-input-container {
+    input, label {
+        font-size: $font-13;
+    }
+}
+.dark {
+    button {
+        color: $white;
+    }
+    md-input-container,  md-input-container.md-input-focused{
+        label {
+            color: $white!important;
+        }
+        input {
+            color: $white;
+            border-bottom: 1px solid $white;
+        }
+    }
+}
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -23,21 +71,12 @@
   letter-spacing: normal;
   word-wrap: normal;
 
-  /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
   text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
   font-feature-settings: 'liga';
 }
 
-html {
-  font-family: 'Roboto', sans-serif;
-}
 
 [layout=row] {
   flex-direction: row;
@@ -69,3 +108,29 @@ md-toolbar.md-default-theme {
     }
   }
 }
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+@media (max-width: 767px) { 
+  .container {
+    width: 100%;
+  }
+ }
+@media (min-width: 768px){ 
+.container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px){ 
+.container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) { 
+.container {
+    width: 1170px;
+  }
+ }
