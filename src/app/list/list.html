@@ -33,4 +33,27 @@
 		</div>
 	</md-toolbar>
 
+	<md-content class="md-padding" layout-xs="column" layout="row">
+    <div layout="row" layout-wrap>
+      <md-card flex="45" ng-repeat="sport in list.sports">
+        <img ng-src="{{sport.imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{sport.title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+			<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 01/07/2017</span>
+			<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Kochi</span>
+          <p>
+            {{sport.description}}
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-primary md-raised">View</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </md-content>
+
 </div>
