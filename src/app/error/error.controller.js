@@ -3,10 +3,10 @@
 
   angular
     .module('comeLetsPlay')
-    .controller('MainController', MainController);
+    .controller('ErrorController', ErrorController);
 
   /** @ngInject */
-  function MainController() {
+  function ErrorController() {
     var vm = this;
   }
 })();

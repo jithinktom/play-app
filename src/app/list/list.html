@@ -8,8 +8,8 @@
 			<div flex-gt-xs layout="row" layout-wrap>
 				<h4 flex="100">Place</h4>
 				<md-input-container flex="90">
-					<md-select ng-model="selectedUser">
-						<md-option ng-value="user" ng-repeat="user in users">{{ user.name }}</md-option>
+					<md-select ng-model="list.selectedPlace">
+						<md-option ng-value="place" ng-repeat="place in list.places track by $index">{{ place }}</md-option>
 					</md-select>
 				</md-input-container>
 			</div>
@@ -17,43 +17,44 @@
 			<div flex-gt-xs layout-wrap layout="row">
 				<h4 flex="100">Sport</h4>
 				<md-input-container flex="90">
-					<md-select ng-model="selectedUser">
-						<md-option ng-value="user" ng-repeat="user in users">{{ user.name }}</md-option>
+					<md-select ng-model="list.selectedSport">
+						<md-option ng-value="sport" ng-repeat="sport in list.sports track by $index">{{ sport }}</md-option>
 					</md-select>
 				</md-input-container>
 			</div>
 			<div flex-gt-xs layout="row" layout-wrap>
 				<h4 flex="100">Date from</h4>
-				<md-datepicker flex="90" ng-model="birthday"></md-datepicker>
+				<md-datepicker flex="90" ng-model="list.fromDate"></md-datepicker>
 			</div>
 			<div flex-gt-xs layout="row" layout-wrap>
 				<h4 flex="100">Date to</h4>
-				<md-datepicker flex="90" ng-model="birthday"></md-datepicker>
+				<md-datepicker flex="90" ng-model="list.toDate" md-min-date="list.fromDate"></md-datepicker>
 			</div>
 		</div>
 	</md-toolbar>
 
 	<md-content class="md-padding" layout-xs="column" layout="row">
-    <div layout="row" layout-wrap>
-      <md-card flex="45" ng-repeat="sport in list.sports">
-        <img ng-src="{{sport.imagePath}}" class="md-card-image" alt="Washed Out">
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">{{sport.title}}</span>
-          </md-card-title-text>
-        </md-card-title>
-        <md-card-content>
-			<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 01/07/2017</span>
-			<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Kochi</span>
-          <p>
-            {{sport.description}}
-          </p>
-        </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button class="md-primary md-raised">View</md-button>
-        </md-card-actions>
-      </md-card>
-    </div>
-  </md-content>
+		<div layout="row" layout-wrap>
+			<md-card flex="45" flex-sm="95" ng-repeat="sport in list.items">
+				<img ng-src="{{sport.imagePath}}" class="md-card-image" alt="Washed Out">
+				<div class="registration" ng-class="{'open' : sport.registrationStatus== 'open', 'closed': sport.registrationStatus== 'closed'}">Registration {{sport.registrationStatus}}</div>
+				<md-card-title>
+					<md-card-title-text>
+						<span class="md-headline">{{sport.title}}</span>
+					</md-card-title-text>
+				</md-card-title>
+				<md-card-content>
+					<span class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 01/07/2017</span>
+					<span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Kochi</span>
+					<p>
+						{{sport.description}}
+					</p>
+				</md-card-content>
+				<md-card-actions layout="row" layout-align="end center">
+					<md-button class="md-primary md-raised" ng-click="list.viewEvent(sport.id)">View</md-button>
+				</md-card-actions>
+			</md-card>
+		</div>
+	</md-content>
 
 </div>

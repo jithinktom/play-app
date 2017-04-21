@@ -14,16 +14,31 @@
         md-input-container {
             margin: 0px;
         }
-        
     }
     md-card {
-            .location,.date {
-                font-size: 12px;    
-                margin-right: 10px;
-            }
-            i {
-                font-size: 16px;
-                color: $primary;
-            }
+        position: relative;
+        .location,
+        .date {
+            font-size: 12px;
+            margin-right: 10px;
         }
+        i {
+            font-size: 16px;
+            color: $primary;
+        }
+        .registration {
+            position: absolute;
+            padding: 7px;
+            color: #fff;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+        }
+        .open {
+            background: $green;
+        }
+        .closed {
+            background: $red;
+        }
+    }
 }
